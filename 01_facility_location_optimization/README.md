@@ -30,6 +30,7 @@ The interactive Streamlit dashboard is available here:
 
 ![Selected Facilities](images/selected_facilities_plot.png)
 
+![Scenario Analysis](images/scenario_analysis.png)
 
 
 ## Optimization Approach
