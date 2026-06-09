@@ -1,0 +1,26 @@
+customer_id,customer_name,x_coord,y_coord,demand
+C1,Customer Zone 1,11.51,66.97,90
+C2,Customer Zone 2,60.91,8.25,176
+C3,Customer Zone 3,13.34,89.71,77
+C4,Customer Zone 4,24.06,29.8,92
+C5,Customer Zone 5,32.71,26.23,99
+C6,Customer Zone 6,85.91,0.51,194
+C7,Customer Zone 7,66.61,54.32,66
+C8,Customer Zone 8,54.12,47.56,158
+C9,Customer Zone 9,2.9,63.64,113
+C10,Customer Zone 10,73.37,97.82,175
+C11,Customer Zone 11,39.5,90.87,81
+C12,Customer Zone 12,80.2,91.02,55
+C13,Customer Zone 13,25.44,52.53,63
+C14,Customer Zone 14,5.69,10.4,58
+C15,Customer Zone 15,86.66,18.09,101
+C16,Customer Zone 16,22.1,95.3,123
+C17,Customer Zone 17,40.5,41.2,54
+C18,Customer Zone 18,31.61,86.5,120
+C19,Customer Zone 19,7.67,67.22,158
+C20,Customer Zone 20,84.32,62.88,137
+C21,Customer Zone 21,84.89,27.56,75
+C22,Customer Zone 22,97.15,89.67,135
+C23,Customer Zone 23,38.54,20.69,74
+C24,Customer Zone 24,95.45,40.44,141
+C25,Customer Zone 25,44.58,99.36,68

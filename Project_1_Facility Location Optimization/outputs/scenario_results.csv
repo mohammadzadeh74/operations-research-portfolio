@@ -1,0 +1,7 @@
+scenario_name,solver_status,total_cost,number_of_selected_facilities,selected_facilities,total_demand,selected_capacity,capacity_utilization,max_facilities,budget,demand_multiplier
+Base Case,Optimal,1250893.04,4,"F4, F5, F6, F8",2683.0,3397,0.79,,,1.0
+Max 3 Facilities,Optimal,1274987.92,3,"F1, F4, F8",2683.0,2725,0.985,3.0,,1.0
+Max 5 Facilities,Optimal,1250893.04,4,"F4, F5, F6, F8",2683.0,3397,0.79,5.0,,1.0
+Low Budget,Optimal,1274987.92,3,"F1, F4, F8",2683.0,2725,0.985,,450000.0,1.0
+High Budget,Optimal,1250893.04,4,"F4, F5, F6, F8",2683.0,3397,0.79,,700000.0,1.0
+Demand Growth 20%,Optimal,1425945.32,4,"F4, F5, F6, F8",3221.0,3397,0.948,,,1.2

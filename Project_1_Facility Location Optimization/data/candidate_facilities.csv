@@ -1,0 +1,9 @@
+facility_id,facility_name,x_coord,y_coord,opening_cost,capacity
+F1,Facility 1,37.45,60.11,133707,875
+F2,Facility 2,95.07,70.81,165305,589
+F3,Facility 3,73.2,2.06,108693,962
+F4,Facility 4,59.87,96.99,151932,966
+F5,Facility 5,15.6,83.24,173016,643
+F6,Facility 6,15.6,21.23,105658,904
+F7,Facility 7,5.81,18.18,164478,530
+F8,Facility 8,86.62,18.34,98431,884
