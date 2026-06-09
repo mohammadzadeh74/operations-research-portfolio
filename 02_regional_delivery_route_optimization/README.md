@@ -85,9 +85,7 @@ Let:
 
 where:
 
-$$
-N = C \cup {0}
-$$
+$$N = C \cup {0}$$
 
 ---
 
@@ -108,9 +106,7 @@ $$
 
 The routing decision variable is:
 
-$$
-x_{ijk} \in {0,1}
-$$
+$$x_{ijk} \in \lbrace 0,1 \rbrace$$
 
 where:
 
@@ -119,9 +115,7 @@ where:
 
 The vehicle-use decision variable is:
 
-$$
-y_k \in {0,1}
-$$
+$$y_k \in \lbrace 0,1 \rbrace$$
 
 where:
 
@@ -130,9 +124,7 @@ where:
 
 The customer-assignment variable is:
 
-$$
-z_{ik} \in {0,1}
-$$
+$$z_{ik} \in \lbrace 0,1 \rbrace$$
 
 where:
 
@@ -145,17 +137,7 @@ where:
 
 The objective is to minimize total operating cost, including fixed vehicle usage costs and distance-based travel costs:
 
-$$
-\min
-\left[
-\sum_{k \in K} F_k y_k
-+
-\sum_{k \in K}
-\sum_{i \in N}
-\sum_{j \in N}
-c_k d_{ij} x_{ijk}
-\right]
-$$
+$$\min \left[ \sum_{k \in K} F_k y_k + \sum_{k \in K} \sum_{i \in N} \sum_{j \in N} c_k d_{ij} x_{ijk} \right]$$
 
 ---
 
@@ -163,72 +145,39 @@ $$
 
 Each customer must be assigned to exactly one vehicle:
 
-$$
-\sum_{k \in K} z_{ik} = 1
-\qquad \forall i \in C
-$$
+$$\sum_{k \in K} z_{ik} = 1 \qquad \forall i \in C$$
 
 Each customer must be visited exactly once:
 
-$$
-\sum_{k \in K} \sum_{j \in N} x_{jik} = 1
-\qquad \forall i \in C
-$$
+$$\sum_{k \in K} \sum_{j \in N} x_{jik} = 1 \qquad \forall i \in C$$
 
 Each used vehicle must leave the depot:
 
-$$
-\sum_{j \in C} x_{0jk} = y_k
-\qquad \forall k \in K
-$$
+$$\sum_{j \in C} x_{0jk} = y_k \qquad \forall k \in K$$
 
 Each used vehicle must return to the depot:
 
-$$
-\sum_{i \in C} x_{i0k} = y_k
-\qquad \forall k \in K
-$$
+$$\sum_{i \in C} x_{i0k} = y_k \qquad \forall k \in K$$
 
 Flow conservation must hold for each vehicle and customer node:
 
-$$
-\sum_{i \in N} x_{ihk}
-======================
-
-\sum_{j \in N} x_{hjk}
-\qquad \forall h \in C,\ \forall k \in K
-$$
+$$\sum_{i \in N} x_{ihk} = \sum_{j \in N} x_{hjk} \qquad \forall h \in C,\ \forall k \in K$$
 
 Vehicle capacity cannot be exceeded:
 
-$$
-\sum_{i \in C} q_i z_{ik} \leq Q_k
-\qquad \forall k \in K
-$$
+$$\sum_{i \in C} q_i z_{ik} \leq Q_k \qquad \forall k \in K$$
 
 Vehicle route-distance limits must be respected:
 
-$$
-\sum_{i \in N} \sum_{j \in N} d_{ij} x_{ijk} \leq L_k
-\qquad \forall k \in K
-$$
+$$\sum_{i \in N} \sum_{j \in N} d_{ij} x_{ijk} \leq L_k \qquad \forall k \in K$$
 
 Decision variables are binary:
 
-$$
-x_{ijk} \in {0,1}
-\qquad \forall i,j \in N,\ \forall k \in K
-$$
+$$x_{ijk} \in \lbrace 0,1 \rbrace \qquad \forall i,j \in N,\ \forall k \in K$$
 
-$$
-y_k \in {0,1}
-\qquad \forall k \in K
-$$
+$$y_k \in \lbrace 0,1 \rbrace \qquad \forall k \in K$$
 
-$$
-z_{ik} \in {0,1}
-\qquad \forall i \in C,\ \forall k \in K
-$$
+$$z_{ik} \in \lbrace 0,1 \rbrace \qquad \forall i \in C,\ \forall k \in K$$
 
 Subtour elimination and route continuity are handled internally by the OR-Tools routing solver.
 
