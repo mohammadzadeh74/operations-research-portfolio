@@ -12,10 +12,6 @@ Each project includes:
 - Streamlit dashboard for stakeholder interaction
 
 
-| Project | OR Method | Tools | Status |
-|---|---|---|---|
-| Facility Location Optimization | MILP, facility location, capacity constraints | Python, PuLP, Streamlit | Completed |
-| Production Planning | LP, resource allocation | Python, PuLP/Scipy, Streamlit | Planned |
-| Vehicle Routing Problem | CVRP, routing optimization | Python, OR-Tools | Planned |
-| Knapsack / Capital Budgeting | Binary Integer Programming | Python, PuLP | Planned |
-| Traveling Salesman Problem | TSP, exact/heuristic routing | Python, OR-Tools | Planned |
+| Project | OR Method | Tools | Status | Demo |
+|---|---|---|---|---|
+| Facility Location Optimization | MILP, Facility Location, Capacity Constraints | Python, PuLP, Streamlit | Completed | [Live App](https://operations-research-portfolio-ueoa43qcwfib95zqqgfnd7.streamlit.app/) |

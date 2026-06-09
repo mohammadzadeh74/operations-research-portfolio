@@ -1,5 +1,13 @@
 # Project 1: Facility Location Optimization for Distribution Network Planning
 
+
+## Live App
+
+The interactive Streamlit dashboard is available here:
+
+[Open the Facility Location Optimization App](https://operations-research-portfolio-ueoa43qcwfib95zqqgfnd7.streamlit.app/)
+
+
 ## Project Overview
 
 This project solves a facility location optimization problem for a distribution network. The goal is to decide which candidate facilities should be opened and how customer zones should be assigned to those facilities while minimizing total cost and satisfying operational constraints.
