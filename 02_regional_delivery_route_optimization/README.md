@@ -1,19 +1,50 @@
 # Regional Delivery Route Optimization for Multi-Vehicle Fleet Planning
 
+## Live App
+
+Streamlit dashboard: **[Launch App](PASTE_STREAMLIT_APP_LINK_HERE)**
+
+> Replace the link above after deploying the Streamlit app.
+
+---
+
 ## Project Overview
 
 This project develops an Operations Research decision-support tool for a regional delivery operation. The goal is to assign customer deliveries to a limited fleet of vehicles while minimizing total operating cost and satisfying vehicle capacity and route-distance constraints.
 
 The project includes:
 
-* A synthetic delivery logistics dataset
-* A capacitated vehicle routing optimization model
+* Synthetic delivery logistics data
+* Capacitated Vehicle Routing Problem (CVRP) formulation
 * Python implementation using OR-Tools
 * Scenario analysis for demand growth, fleet size, capacity, and route limits
 * Interactive Streamlit dashboard for stakeholder decision support
 * Downloadable route plans and scenario outputs
+* Infeasibility diagnosis for operational planning
 
-This project is designed as part of an Operations Research portfolio to demonstrate routing optimization, scenario analysis, and stakeholder-facing analytics.
+---
+
+## Dashboard Preview
+
+### Main Dashboard
+
+![Main Streamlit Dashboard](assets/app_main.png)
+
+### Optimized Route Map
+
+![Optimized Route Map](assets/route_map.png)
+
+### Scenario Cost Comparison
+
+![Scenario Cost Comparison](assets/scenario_cost_comparison.png)
+
+### Scenario Utilization Comparison
+
+![Scenario Utilization Comparison](assets/scenario_utilization_comparison.png)
+
+### Infeasibility Diagnosis
+
+![Infeasibility Diagnosis](assets/infeasibility_diagnosis.png)
 
 ---
 
@@ -38,6 +69,8 @@ The optimization model helps planners create cost-effective delivery routes whil
 ## Operations Research Model
 
 This project is modeled as a **Capacitated Vehicle Routing Problem (CVRP)** with route-distance limits and vehicle-specific operating costs.
+
+---
 
 ### Sets
 
@@ -75,30 +108,36 @@ The routing decision variable is:
 
 $$
 x_{ijk} =
-\begin{cases}
+\left{
+\begin{array}{ll}
 1, & \text{if vehicle } k \text{ travels directly from node } i \text{ to node } j \
 0, & \text{otherwise}
-\end{cases}
+\end{array}
+\right.
 $$
 
 The vehicle-use decision variable is:
 
 $$
 y_k =
-\begin{cases}
+\left{
+\begin{array}{ll}
 1, & \text{if vehicle } k \text{ is used} \
 0, & \text{otherwise}
-\end{cases}
+\end{array}
+\right.
 $$
 
 The customer-assignment variable is:
 
 $$
 z_{ik} =
-\begin{cases}
+\left{
+\begin{array}{ll}
 1, & \text{if customer } i \text{ is served by vehicle } k \
 0, & \text{otherwise}
-\end{cases}
+\end{array}
+\right.
 $$
 
 ---
@@ -108,9 +147,15 @@ $$
 The objective is to minimize total operating cost, including fixed vehicle usage costs and distance-based travel costs:
 
 $$
-\min \sum_{k \in K} F_k y_k
+\min
+\left(
+\sum_{k \in K} F_k y_k
 +
-\sum_{k \in K} \sum_{i \in N} \sum_{j \in N} c_k d_{ij} x_{ijk}
+\sum_{k \in K}
+\sum_{i \in N}
+\sum_{j \in N}
+c_k d_{ij} x_{ijk}
+\right)
 $$
 
 ---
@@ -152,7 +197,7 @@ $$
 ======================
 
 \sum_{j \in N} x_{hjk}
-\qquad \forall h \in C, \forall k \in K
+\qquad \forall h \in C,\ \forall k \in K
 $$
 
 Vehicle capacity cannot be exceeded:
@@ -173,7 +218,7 @@ Decision variables are binary:
 
 $$
 x_{ijk} \in {0,1}
-\qquad \forall i,j \in N, \forall k \in K
+\qquad \forall i,j \in N,\ \forall k \in K
 $$
 
 $$
@@ -183,7 +228,7 @@ $$
 
 $$
 z_{ik} \in {0,1}
-\qquad \forall i \in C, \forall k \in K
+\qquad \forall i \in C,\ \forall k \in K
 $$
 
 Subtour elimination and route continuity are handled internally by the OR-Tools routing solver.
@@ -195,8 +240,6 @@ Subtour elimination and route continuity are handled internally by the OR-Tools 
 The project uses a synthetic logistics dataset representing a regional delivery operation.
 
 ### Input Files
-
-The model uses four input CSV files:
 
 | File                  | Description                                                          |
 | --------------------- | -------------------------------------------------------------------- |
@@ -274,6 +317,13 @@ The project follows the workflow below:
 │
 ├── app/
 │   └── streamlit_app.py
+│
+├── assets/
+│   ├── app_main.png
+│   ├── route_map.png
+│   ├── scenario_cost_comparison.png
+│   ├── scenario_utilization_comparison.png
+│   └── infeasibility_diagnosis.png
 │
 ├── data/
 │   ├── depot.csv
@@ -386,8 +436,6 @@ This makes the dashboard more useful as a decision-support tool rather than only
 
 ## Output Files
 
-The model generates several useful output files.
-
 | Output File                                    | Description                                            |
 | ---------------------------------------------- | ------------------------------------------------------ |
 | `data/optimized_routes.csv`                    | Stop-level route assignment for the latest solved case |
@@ -404,8 +452,6 @@ The model generates several useful output files.
 ## How to Run the Project
 
 ### 1. Clone or open the repository
-
-Navigate to the project folder:
 
 ```bash
 cd 02_regional_delivery_route_optimization
@@ -456,8 +502,6 @@ streamlit run app/streamlit_app.py
 ---
 
 ## Requirements
-
-The project uses the following Python packages:
 
 ```text
 numpy<2
