@@ -4,7 +4,7 @@
 
 Streamlit dashboard: **[Launch App](PASTE_STREAMLIT_APP_LINK_HERE)**
 
-> Replace the link above after deploying the Streamlit app.
+> Replace the placeholder above with your Streamlit app link after deployment.
 
 ---
 
@@ -17,10 +17,12 @@ The project includes:
 * Synthetic delivery logistics data
 * Capacitated Vehicle Routing Problem (CVRP) formulation
 * Python implementation using OR-Tools
-* Scenario analysis for demand growth, fleet size, capacity, and route limits
+* Scenario analysis for demand growth, fleet size, vehicle capacity, and route limits
 * Interactive Streamlit dashboard for stakeholder decision support
 * Downloadable route plans and scenario outputs
 * Infeasibility diagnosis for operational planning
+
+This project is designed as part of an Operations Research portfolio to demonstrate routing optimization, scenario analysis, and stakeholder-facing analytics.
 
 ---
 
@@ -107,38 +109,35 @@ $$
 The routing decision variable is:
 
 $$
-x_{ijk} =
-\left{
-\begin{array}{ll}
-1, & \text{if vehicle } k \text{ travels directly from node } i \text{ to node } j \
-0, & \text{otherwise}
-\end{array}
-\right.
+x_{ijk} \in {0,1}
 $$
+
+where:
+
+* $x_{ijk} = 1$ if vehicle $k$ travels directly from node $i$ to node $j$
+* $x_{ijk} = 0$ otherwise
 
 The vehicle-use decision variable is:
 
 $$
-y_k =
-\left{
-\begin{array}{ll}
-1, & \text{if vehicle } k \text{ is used} \
-0, & \text{otherwise}
-\end{array}
-\right.
+y_k \in {0,1}
 $$
+
+where:
+
+* $y_k = 1$ if vehicle $k$ is used
+* $y_k = 0$ otherwise
 
 The customer-assignment variable is:
 
 $$
-z_{ik} =
-\left{
-\begin{array}{ll}
-1, & \text{if customer } i \text{ is served by vehicle } k \
-0, & \text{otherwise}
-\end{array}
-\right.
+z_{ik} \in {0,1}
 $$
+
+where:
+
+* $z_{ik} = 1$ if customer $i$ is served by vehicle $k$
+* $z_{ik} = 0$ otherwise
 
 ---
 
@@ -148,14 +147,14 @@ The objective is to minimize total operating cost, including fixed vehicle usage
 
 $$
 \min
-\left(
+\left[
 \sum_{k \in K} F_k y_k
 +
 \sum_{k \in K}
 \sum_{i \in N}
 \sum_{j \in N}
 c_k d_{ij} x_{ijk}
-\right)
+\right]
 $$
 
 ---
