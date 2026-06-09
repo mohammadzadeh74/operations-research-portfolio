@@ -10,3 +10,12 @@ Each project includes:
 - Solver results and interpretation
 - Scenario or sensitivity analysis
 - Streamlit dashboard for stakeholder interaction
+
+
+| Project | OR Method | Tools | Status |
+|---|---|---|---|
+| Facility Location Optimization | MILP, facility location, capacity constraints | Python, PuLP, Streamlit | Completed |
+| Production Planning | LP, resource allocation | Python, PuLP/Scipy, Streamlit | Planned |
+| Vehicle Routing Problem | CVRP, routing optimization | Python, OR-Tools | Planned |
+| Knapsack / Capital Budgeting | Binary Integer Programming | Python, PuLP | Planned |
+| Traveling Salesman Problem | TSP, exact/heuristic routing | Python, OR-Tools | Planned |
