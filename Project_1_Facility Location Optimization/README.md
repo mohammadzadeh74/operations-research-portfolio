@@ -47,31 +47,31 @@ The model includes constraints for:
 
 Let:
 
-- \( I \) = set of candidate facility locations  
-- \( J \) = set of customer zones  
+- $I$ = set of candidate facility locations
+- $J$ = set of customer zones
 
 ### Parameters
 
-- \( f_i \) = fixed opening cost of facility \( i \)
-- \( c_{ij} \) = transportation or assignment cost from facility \( i \) to customer \( j \)
-- \( d_j \) = demand of customer zone \( j \)
-- \( q_i \) = capacity of facility \( i \)
-- \( B \) = available budget
-- \( K \) = maximum number of facilities allowed
-- \( a_{ij} \) = 1 if facility \( i \) can serve customer \( j \), 0 otherwise
+- $f_i$ = fixed opening cost of facility $i$
+- $c_{ij}$ = transportation or assignment cost from facility $i$ to customer $j$
+- $d_j$ = demand of customer zone $j$
+- $q_i$ = capacity of facility $i$
+- $B$ = available budget
+- $K$ = maximum number of facilities allowed
+- $a_{ij}$ = 1 if facility $i$ can serve customer $j$, 0 otherwise
 
 ### Decision Variables
 
-- \( y_i \in \{0,1\} \): 1 if facility \( i \) is opened, 0 otherwise
-- \( x_{ij} \in \{0,1\} \): 1 if customer \( j \) is assigned to facility \( i \), 0 otherwise
+- $y_i \in \{0,1\}$: 1 if facility $i$ is opened, 0 otherwise
+- $x_{ij} \in \{0,1\}$: 1 if customer $j$ is assigned to facility $i$, 0 otherwise
 
 ### Objective Function
 
 Minimize total cost:
 
-\[
+$$
 \min \sum_{i \in I} f_i y_i + \sum_{i \in I}\sum_{j \in J} c_{ij} d_j x_{ij}
-\]
+$$
 
 The first term represents facility opening costs, and the second term represents demand-weighted assignment or transportation costs.
 
@@ -79,49 +79,59 @@ The first term represents facility opening costs, and the second term represents
 
 Each customer must be assigned to exactly one facility:
 
-\[
+$$
 \sum_{i \in I} x_{ij} = 1 \quad \forall j \in J
-\]
+$$
 
 Customers can only be assigned to open facilities:
 
-\[
+$$
 x_{ij} \leq y_i \quad \forall i \in I, j \in J
-\]
+$$
 
 Facility capacity cannot be exceeded:
 
-\[
+$$
 \sum_{j \in J} d_j x_{ij} \leq q_i y_i \quad \forall i \in I
-\]
+$$
 
 The number of selected facilities cannot exceed the allowed limit:
 
-\[
+$$
 \sum_{i \in I} y_i \leq K
-\]
+$$
 
 Total facility opening cost must stay within the available budget:
 
-\[
+$$
 \sum_{i \in I} f_i y_i \leq B
-\]
+$$
 
 Assignments are only allowed when a facility can serve a customer within the service-distance limit:
 
-\[
+$$
 x_{ij} \leq a_{ij} \quad \forall i \in I, j \in J
-\]
+$$
 
 Binary decision variables:
 
-\[
+$$
 y_i \in \{0,1\} \quad \forall i \in I
-\]
+$$
 
-\[
+$$
 x_{ij} \in \{0,1\} \quad \forall i \in I, j \in J
-\]
+$$
+
+### Demand Growth Scenario
+
+For scenario analysis, customer demand can be adjusted using a demand growth rate $g$:
+
+$$
+d_j^{scenario} = d_j(1 + g)
+$$
+
+where $g$ represents the selected demand growth percentage.
 ## Data
 
 The project uses synthetic datasets representing:
