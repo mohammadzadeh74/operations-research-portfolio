@@ -17,28 +17,16 @@ Project: Facility Location Optimization
 import os
 import pandas as pd
 import pulp
+from pathlib import Path
 
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data"
 
 def load_data():
-    """
-    Load the synthetic datasets.
-
-    Returns
-    -------
-    facilities : pandas.DataFrame
-        Candidate facility data.
-
-    customers : pandas.DataFrame
-        Customer zone data.
-
-    transportation_costs : pandas.DataFrame
-        Transportation cost data between customers and facilities.
-    """
-
-    facilities = pd.read_csv("data/candidate_facilities.csv")
-    customers = pd.read_csv("data/customer_zones.csv")
-    transportation_costs = pd.read_csv("data/transportation_costs.csv")
-
+    facilities = pd.read_csv(DATA_DIR / "candidate_facilities.csv")
+    customers = pd.read_csv(DATA_DIR / "customer_zones.csv")
+    transportation_costs = pd.read_csv(DATA_DIR / "transportation_costs.csv")
     return facilities, customers, transportation_costs
 
 
