@@ -36,13 +36,6 @@ This project is designed as part of an Operations Research portfolio to demonstr
 
 ![Optimized Route Map](assets/route_map.png)
 
-### Scenario Cost Comparison
-
-![Scenario Cost Comparison](assets/scenario_cost_comparison.png)
-
-### Scenario Utilization Comparison
-
-![Scenario Utilization Comparison](assets/scenario_utilization_comparison.png)
 
 ### Infeasibility Diagnosis
 
