@@ -1,0 +1,7 @@
+scenario,feasible,total_demand,total_capacity,active_vehicles,total_distance_miles,total_operating_cost,average_capacity_utilization,maximum_capacity_utilization
+Base Case,True,392,520,4,702.16,1962.18,0.979,1.0
+Demand Growth 10%,True,433,520,4,685.56,2029.77,0.986,1.0
+Demand Growth 20%,True,470,520,5,768.63,2213.1,0.903,0.967
+Reduced Fleet,True,392,440,4,685.65,2011.53,0.898,0.975
+Tight Route Limit,True,392,520,4,696.7,2061.8,0.88,0.967
+Expanded Capacity,True,392,598,4,642.06,1845.91,0.829,0.964

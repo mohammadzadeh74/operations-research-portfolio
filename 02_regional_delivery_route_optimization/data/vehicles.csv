@@ -1,0 +1,6 @@
+vehicle_id,vehicle_type,capacity_units,fixed_cost,cost_per_mile,max_route_distance
+V1,Box Truck,120,130,2.4,280
+V2,Box Truck,120,130,2.4,280
+V3,Box Truck,120,130,2.4,280
+V4,Van,80,90,1.75,180
+V5,Van,80,90,1.75,180

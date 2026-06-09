@@ -1,0 +1,36 @@
+vehicle_id,vehicle_type,stop_sequence,location_id,demand_units,route_load_so_far,vehicle_capacity
+V1,Box Truck,0,D0,0,0,138
+V1,Box Truck,1,C10,20,20,138
+V1,Box Truck,2,C13,19,39,138
+V1,Box Truck,3,C22,5,44,138
+V1,Box Truck,4,C8,12,56,138
+V1,Box Truck,5,C15,17,73,138
+V1,Box Truck,6,C3,18,91,138
+V1,Box Truck,7,C19,5,96,138
+V1,Box Truck,8,C17,19,115,138
+V1,Box Truck,9,C16,13,128,138
+V1,Box Truck,10,D0,0,128,138
+V2,Box Truck,0,D0,0,0,138
+V2,Box Truck,1,C2,8,8,138
+V2,Box Truck,2,C18,17,25,138
+V2,Box Truck,3,C5,19,44,138
+V2,Box Truck,4,C1,14,58,138
+V2,Box Truck,5,C23,16,74,138
+V2,Box Truck,6,C4,20,94,138
+V2,Box Truck,7,C12,22,116,138
+V2,Box Truck,8,C11,17,133,138
+V2,Box Truck,9,D0,0,133,138
+V3,Box Truck,0,D0,0,0,138
+V3,Box Truck,1,D0,0,0,138
+V4,Van,0,D0,0,0,92
+V4,Van,1,C24,12,12,92
+V4,Van,2,C25,15,27,92
+V4,Van,3,C14,25,52,92
+V4,Van,4,C21,13,65,92
+V4,Van,5,C6,12,77,92
+V4,Van,6,C20,11,88,92
+V4,Van,7,D0,0,88,92
+V5,Van,0,D0,0,0,92
+V5,Van,1,C7,18,18,92
+V5,Van,2,C9,25,43,92
+V5,Van,3,D0,0,43,92

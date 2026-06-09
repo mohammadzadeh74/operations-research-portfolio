@@ -1,0 +1,26 @@
+customer_id,customer_name,zone,x_coord,y_coord,demand_units,priority_level,service_time_min
+C1,Retail Customer 1,West,95,94,14,Standard,22
+C2,Retail Customer 2,Central,63,57,8,High,28
+C3,Retail Customer 3,East,46,6,18,High,16
+C4,Retail Customer 4,Central,64,88,20,Standard,26
+C5,Retail Customer 5,Central,84,64,19,Critical,29
+C6,Retail Customer 6,South,19,75,12,High,13
+C7,Retail Customer 7,East,66,48,18,Critical,14
+C8,Retail Customer 8,East,66,12,12,High,16
+C9,Retail Customer 9,East,51,51,25,Standard,22
+C10,Retail Customer 10,Central,66,39,20,Standard,24
+C11,Retail Customer 11,West,55,82,17,Standard,20
+C12,Retail Customer 12,East,59,85,22,High,13
+C13,Retail Customer 13,Central,68,40,19,High,22
+C14,Retail Customer 14,South,7,54,25,Standard,16
+C15,Retail Customer 15,West,55,8,17,Standard,28
+C16,Retail Customer 16,South,11,6,13,Standard,11
+C17,Retail Customer 17,West,25,10,19,Standard,19
+C18,Retail Customer 18,Central,77,58,17,Critical,22
+C19,Retail Customer 19,North,43,8,5,High,30
+C20,Retail Customer 20,West,22,58,11,High,15
+C21,Retail Customer 21,South,8,67,13,Standard,21
+C22,Retail Customer 22,Central,93,22,5,Standard,21
+C23,Retail Customer 23,West,64,94,16,Standard,29
+C24,Retail Customer 24,North,18,48,12,High,20
+C25,Retail Customer 25,North,13,38,15,Standard,16

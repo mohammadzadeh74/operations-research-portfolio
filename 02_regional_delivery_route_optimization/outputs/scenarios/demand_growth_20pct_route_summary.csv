@@ -1,0 +1,6 @@
+vehicle_id,vehicle_type,route_distance_miles,max_route_distance,route_load,vehicle_capacity,capacity_utilization,number_of_customer_stops,fixed_cost,cost_per_mile,route_travel_cost,route_total_cost,vehicle_used
+V1,Box Truck,220.28,280,111,120,0.925,7,130,2.4,528.67,658.67,True
+V2,Box Truck,58.27,280,99,120,0.825,4,130,2.4,139.85,269.85,True
+V3,Box Truck,179.89,280,116,120,0.967,6,130,2.4,431.74,561.74,True
+V4,Van,138.89,180,73,80,0.912,4,90,1.75,243.06,333.06,True
+V5,Van,171.3,180,71,80,0.888,4,90,1.75,299.78,389.78,True
