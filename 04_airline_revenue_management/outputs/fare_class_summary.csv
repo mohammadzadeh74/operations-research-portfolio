@@ -1,0 +1,5 @@
+fare_class,avg_fare_price,avg_forecasted_demand,avg_expected_sales,avg_booking_limit,avg_protected_seats,total_expected_revenue
+Basic,121.1,83.78,48.62,47.78,122.22,345316.75
+Comfort,386.78,32.33,32.33,150.15,19.85,752226.65
+First,718.77,20.28,20.28,170.0,0.0,869170.05
+Main,214.3,65.95,64.93,115.83,54.17,837408.75

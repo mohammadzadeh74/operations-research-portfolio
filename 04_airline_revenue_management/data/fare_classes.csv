@@ -1,0 +1,5 @@
+fare_class,class_rank,description,base_price
+Basic,1,Lowest fare with restrictions,120
+Main,2,Standard economy fare,220
+Comfort,3,Extra legroom or premium economy,380
+First,4,Highest fare cabin,750

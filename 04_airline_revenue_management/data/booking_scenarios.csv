@@ -1,0 +1,7 @@
+scenario_id,scenario_name,demand_multiplier,price_multiplier,uncertainty_multiplier,description
+BASE,Base Demand,1.0,1.0,1.0,Normal forecasted demand and fare prices.
+HIGH_DEMAND,High Demand,1.25,1.05,1.15,Higher-than-normal passenger demand.
+LOW_DEMAND,Low Demand,0.75,0.95,0.9,Lower-than-normal passenger demand.
+BUSINESS_HEAVY,Business-Heavy Route,1.1,1.1,1.1,More demand from higher-fare business travelers.
+LEISURE_HEAVY,Leisure-Heavy Route,1.15,0.9,1.05,More price-sensitive leisure demand.
+PRICE_PRESSURE,Competitor Price Pressure,0.95,0.85,1.2,Lower prices due to competitor pressure.

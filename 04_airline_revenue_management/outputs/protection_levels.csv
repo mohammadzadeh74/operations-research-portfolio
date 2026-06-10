@@ -1,0 +1,241 @@
+flight_id,scenario_id,fare_class,class_rank,fare_price,forecasted_demand,demand_std,protected_seats_for_higher_classes,booking_limit,protection_reason
+FL001,BASE,Basic,1,136.0,50,10,132,18,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL001,BASE,Main,2,206.0,60,12,70,80,"Protecting seats for higher fare classes: Comfort, First"
+FL001,BASE,Comfort,3,409.0,38,7,28,122,Protecting seats for higher fare classes: First
+FL001,BASE,First,4,714.0,29,5,0,150,Highest fare class; no higher class to protect.
+FL001,HIGH_DEMAND,Basic,1,142.8,62,12,150,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL001,HIGH_DEMAND,Main,2,216.3,75,14,87,63,"Protecting seats for higher fare classes: Comfort, First"
+FL001,HIGH_DEMAND,Comfort,3,429.45,48,8,35,115,Protecting seats for higher fare classes: First
+FL001,HIGH_DEMAND,First,4,749.7,36,6,0,150,Highest fare class; no higher class to protect.
+FL001,LOW_DEMAND,Basic,1,129.2,38,9,100,50,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL001,LOW_DEMAND,Main,2,195.7,45,11,52,98,"Protecting seats for higher fare classes: Comfort, First"
+FL001,LOW_DEMAND,Comfort,3,388.55,28,6,21,129,Protecting seats for higher fare classes: First
+FL001,LOW_DEMAND,First,4,678.3,22,4,0,150,Highest fare class; no higher class to protect.
+FL001,BUSINESS_HEAVY,Basic,1,149.6,55,11,146,4,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL001,BUSINESS_HEAVY,Main,2,226.6,66,13,77,73,"Protecting seats for higher fare classes: Comfort, First"
+FL001,BUSINESS_HEAVY,Comfort,3,449.9,42,8,31,119,Protecting seats for higher fare classes: First
+FL001,BUSINESS_HEAVY,First,4,785.4,32,6,0,150,Highest fare class; no higher class to protect.
+FL001,LEISURE_HEAVY,Basic,1,122.4,57,10,150,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL001,LEISURE_HEAVY,Main,2,185.4,69,13,80,70,"Protecting seats for higher fare classes: Comfort, First"
+FL001,LEISURE_HEAVY,Comfort,3,368.1,44,7,32,118,Protecting seats for higher fare classes: First
+FL001,LEISURE_HEAVY,First,4,642.6,33,5,0,150,Highest fare class; no higher class to protect.
+FL001,PRICE_PRESSURE,Basic,1,115.6,48,12,127,23,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL001,PRICE_PRESSURE,Main,2,175.1,57,14,67,83,"Protecting seats for higher fare classes: Comfort, First"
+FL001,PRICE_PRESSURE,Comfort,3,347.65,36,8,27,123,Protecting seats for higher fare classes: First
+FL001,PRICE_PRESSURE,First,4,606.9,28,6,0,150,Highest fare class; no higher class to protect.
+FL002,BASE,Basic,1,123.0,52,10,149,11,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL002,BASE,Main,2,205.0,74,14,70,90,"Protecting seats for higher fare classes: Comfort, First"
+FL002,BASE,Comfort,3,416.0,39,7,28,132,Protecting seats for higher fare classes: First
+FL002,BASE,First,4,683.0,29,5,0,160,Highest fare class; no higher class to protect.
+FL002,HIGH_DEMAND,Basic,1,129.15,65,12,160,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL002,HIGH_DEMAND,Main,2,215.25,92,16,88,72,"Protecting seats for higher fare classes: Comfort, First"
+FL002,HIGH_DEMAND,Comfort,3,436.8,49,8,34,126,Protecting seats for higher fare classes: First
+FL002,HIGH_DEMAND,First,4,717.15,36,6,0,160,Highest fare class; no higher class to protect.
+FL002,LOW_DEMAND,Basic,1,116.85,39,9,113,47,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL002,LOW_DEMAND,Main,2,194.75,56,13,53,107,"Protecting seats for higher fare classes: Comfort, First"
+FL002,LOW_DEMAND,Comfort,3,395.2,29,6,21,139,Protecting seats for higher fare classes: First
+FL002,LOW_DEMAND,First,4,648.85,22,4,0,160,Highest fare class; no higher class to protect.
+FL002,BUSINESS_HEAVY,Basic,1,135.3,57,11,160,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL002,BUSINESS_HEAVY,Main,2,225.5,81,15,78,82,"Protecting seats for higher fare classes: Comfort, First"
+FL002,BUSINESS_HEAVY,Comfort,3,457.6,43,8,30,130,Protecting seats for higher fare classes: First
+FL002,BUSINESS_HEAVY,First,4,751.3,32,6,0,160,Highest fare class; no higher class to protect.
+FL002,LEISURE_HEAVY,Basic,1,110.7,60,10,160,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL002,LEISURE_HEAVY,Main,2,184.5,85,15,80,80,"Protecting seats for higher fare classes: Comfort, First"
+FL002,LEISURE_HEAVY,Comfort,3,374.4,45,7,32,128,Protecting seats for higher fare classes: First
+FL002,LEISURE_HEAVY,First,4,614.7,33,5,0,160,Highest fare class; no higher class to protect.
+FL002,PRICE_PRESSURE,Basic,1,104.55,49,12,143,17,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL002,PRICE_PRESSURE,Main,2,174.25,70,17,68,92,"Protecting seats for higher fare classes: Comfort, First"
+FL002,PRICE_PRESSURE,Comfort,3,353.6,37,8,26,134,Protecting seats for higher fare classes: First
+FL002,PRICE_PRESSURE,First,4,580.55,28,6,0,160,Highest fare class; no higher class to protect.
+FL003,BASE,Basic,1,136.0,107,21,94,96,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL003,BASE,Main,2,203.0,62,12,31,159,"Protecting seats for higher fare classes: Comfort, First"
+FL003,BASE,Comfort,3,389.0,20,4,10,180,Protecting seats for higher fare classes: First
+FL003,BASE,First,4,799.0,10,3,0,190,Highest fare class; no higher class to protect.
+FL003,HIGH_DEMAND,Basic,1,142.8,134,24,117,73,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL003,HIGH_DEMAND,Main,2,213.15,78,14,39,151,"Protecting seats for higher fare classes: Comfort, First"
+FL003,HIGH_DEMAND,Comfort,3,408.45,25,5,12,178,Protecting seats for higher fare classes: First
+FL003,HIGH_DEMAND,First,4,838.95,12,3,0,190,Highest fare class; no higher class to protect.
+FL003,LOW_DEMAND,Basic,1,129.2,80,19,71,119,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL003,LOW_DEMAND,Main,2,192.85,46,11,25,165,"Protecting seats for higher fare classes: Comfort, First"
+FL003,LOW_DEMAND,Comfort,3,369.55,15,4,8,182,Protecting seats for higher fare classes: First
+FL003,LOW_DEMAND,First,4,759.05,8,3,0,190,Highest fare class; no higher class to protect.
+FL003,BUSINESS_HEAVY,Basic,1,149.6,118,23,103,87,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL003,BUSINESS_HEAVY,Main,2,223.3,68,13,34,156,"Protecting seats for higher fare classes: Comfort, First"
+FL003,BUSINESS_HEAVY,Comfort,3,427.9,22,4,11,179,Protecting seats for higher fare classes: First
+FL003,BUSINESS_HEAVY,First,4,878.9,11,3,0,190,Highest fare class; no higher class to protect.
+FL003,LEISURE_HEAVY,Basic,1,122.4,123,22,108,82,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL003,LEISURE_HEAVY,Main,2,182.7,71,13,36,154,"Protecting seats for higher fare classes: Comfort, First"
+FL003,LEISURE_HEAVY,Comfort,3,350.1,23,4,12,178,Protecting seats for higher fare classes: First
+FL003,LEISURE_HEAVY,First,4,719.1,12,3,0,190,Highest fare class; no higher class to protect.
+FL003,PRICE_PRESSURE,Basic,1,115.6,102,25,90,100,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL003,PRICE_PRESSURE,Main,2,172.55,59,14,31,159,"Protecting seats for higher fare classes: Comfort, First"
+FL003,PRICE_PRESSURE,Comfort,3,330.65,19,5,10,180,Protecting seats for higher fare classes: First
+FL003,PRICE_PRESSURE,First,4,679.15,10,4,0,190,Highest fare class; no higher class to protect.
+FL004,BASE,Basic,1,113.0,98,19,86,64,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL004,BASE,Main,2,247.0,59,11,23,127,"Protecting seats for higher fare classes: Comfort, First"
+FL004,BASE,Comfort,3,360.0,15,3,8,142,Protecting seats for higher fare classes: First
+FL004,BASE,First,4,725.0,8,3,0,150,Highest fare class; no higher class to protect.
+FL004,HIGH_DEMAND,Basic,1,118.65,122,22,108,42,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL004,HIGH_DEMAND,Main,2,259.35,74,13,29,121,"Protecting seats for higher fare classes: Comfort, First"
+FL004,HIGH_DEMAND,Comfort,3,378.0,19,3,10,140,Protecting seats for higher fare classes: First
+FL004,HIGH_DEMAND,First,4,761.25,10,3,0,150,Highest fare class; no higher class to protect.
+FL004,LOW_DEMAND,Basic,1,107.35,74,17,65,85,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL004,LOW_DEMAND,Main,2,234.65,44,10,17,133,"Protecting seats for higher fare classes: Comfort, First"
+FL004,LOW_DEMAND,Comfort,3,342.0,11,3,6,144,Protecting seats for higher fare classes: First
+FL004,LOW_DEMAND,First,4,688.75,6,3,0,150,Highest fare class; no higher class to protect.
+FL004,BUSINESS_HEAVY,Basic,1,124.3,108,21,95,55,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL004,BUSINESS_HEAVY,Main,2,271.7,65,12,25,125,"Protecting seats for higher fare classes: Comfort, First"
+FL004,BUSINESS_HEAVY,Comfort,3,396.0,16,3,9,141,Protecting seats for higher fare classes: First
+FL004,BUSINESS_HEAVY,First,4,797.5,9,3,0,150,Highest fare class; no higher class to protect.
+FL004,LEISURE_HEAVY,Basic,1,101.7,113,20,99,51,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL004,LEISURE_HEAVY,Main,2,222.3,68,12,26,124,"Protecting seats for higher fare classes: Comfort, First"
+FL004,LEISURE_HEAVY,Comfort,3,324.0,17,3,9,141,Protecting seats for higher fare classes: First
+FL004,LEISURE_HEAVY,First,4,652.5,9,3,0,150,Highest fare class; no higher class to protect.
+FL004,PRICE_PRESSURE,Basic,1,96.05,93,23,83,67,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL004,PRICE_PRESSURE,Main,2,209.95,56,13,22,128,"Protecting seats for higher fare classes: Comfort, First"
+FL004,PRICE_PRESSURE,Comfort,3,306.0,14,4,8,142,Protecting seats for higher fare classes: First
+FL004,PRICE_PRESSURE,First,4,616.25,8,4,0,150,Highest fare class; no higher class to protect.
+FL005,BASE,Basic,1,124.0,74,14,101,59,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL005,BASE,Main,2,252.0,55,11,41,119,"Protecting seats for higher fare classes: Comfort, First"
+FL005,BASE,Comfort,3,419.0,24,4,16,144,Protecting seats for higher fare classes: First
+FL005,BASE,First,4,688.0,17,3,0,160,Highest fare class; no higher class to protect.
+FL005,HIGH_DEMAND,Basic,1,130.2,92,16,126,34,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL005,HIGH_DEMAND,Main,2,264.6,69,13,51,109,"Protecting seats for higher fare classes: Comfort, First"
+FL005,HIGH_DEMAND,Comfort,3,439.95,30,5,20,140,Protecting seats for higher fare classes: First
+FL005,HIGH_DEMAND,First,4,722.4,21,3,0,160,Highest fare class; no higher class to protect.
+FL005,LOW_DEMAND,Basic,1,117.8,56,13,77,83,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL005,LOW_DEMAND,Main,2,239.4,41,10,31,129,"Protecting seats for higher fare classes: Comfort, First"
+FL005,LOW_DEMAND,Comfort,3,398.05,18,4,12,148,Protecting seats for higher fare classes: First
+FL005,LOW_DEMAND,First,4,653.6,13,3,0,160,Highest fare class; no higher class to protect.
+FL005,BUSINESS_HEAVY,Basic,1,136.4,81,15,112,48,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL005,BUSINESS_HEAVY,Main,2,277.2,61,12,45,115,"Protecting seats for higher fare classes: Comfort, First"
+FL005,BUSINESS_HEAVY,Comfort,3,460.9,26,4,18,142,Protecting seats for higher fare classes: First
+FL005,BUSINESS_HEAVY,First,4,756.8,19,3,0,160,Highest fare class; no higher class to protect.
+FL005,LEISURE_HEAVY,Basic,1,111.6,85,15,117,43,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL005,LEISURE_HEAVY,Main,2,226.8,63,12,48,112,"Protecting seats for higher fare classes: Comfort, First"
+FL005,LEISURE_HEAVY,Comfort,3,377.1,28,4,19,141,Protecting seats for higher fare classes: First
+FL005,LEISURE_HEAVY,First,4,619.2,20,3,0,160,Highest fare class; no higher class to protect.
+FL005,PRICE_PRESSURE,Basic,1,105.4,70,17,97,63,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL005,PRICE_PRESSURE,Main,2,214.2,52,13,39,121,"Protecting seats for higher fare classes: Comfort, First"
+FL005,PRICE_PRESSURE,Comfort,3,356.15,23,5,15,145,Protecting seats for higher fare classes: First
+FL005,PRICE_PRESSURE,First,4,584.8,16,4,0,160,Highest fare class; no higher class to protect.
+FL006,BASE,Basic,1,126.0,73,14,178,12,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL006,BASE,Main,2,215.0,80,16,92,98,"Protecting seats for higher fare classes: Comfort, First"
+FL006,BASE,Comfort,3,386.0,53,10,36,154,Protecting seats for higher fare classes: First
+FL006,BASE,First,4,780.0,36,7,0,190,Highest fare class; no higher class to protect.
+FL006,HIGH_DEMAND,Basic,1,132.3,91,16,190,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL006,HIGH_DEMAND,Main,2,225.75,100,18,115,75,"Protecting seats for higher fare classes: Comfort, First"
+FL006,HIGH_DEMAND,Comfort,3,405.3,66,12,45,145,Protecting seats for higher fare classes: First
+FL006,HIGH_DEMAND,First,4,819.0,45,8,0,190,Highest fare class; no higher class to protect.
+FL006,LOW_DEMAND,Basic,1,119.7,55,13,135,55,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL006,LOW_DEMAND,Main,2,204.25,60,14,70,120,"Protecting seats for higher fare classes: Comfort, First"
+FL006,LOW_DEMAND,Comfort,3,366.7,40,9,27,163,Protecting seats for higher fare classes: First
+FL006,LOW_DEMAND,First,4,741.0,27,6,0,190,Highest fare class; no higher class to protect.
+FL006,BUSINESS_HEAVY,Basic,1,138.6,80,15,190,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL006,BUSINESS_HEAVY,Main,2,236.5,88,18,102,88,"Protecting seats for higher fare classes: Comfort, First"
+FL006,BUSINESS_HEAVY,Comfort,3,424.6,58,11,40,150,Protecting seats for higher fare classes: First
+FL006,BUSINESS_HEAVY,First,4,858.0,40,8,0,190,Highest fare class; no higher class to protect.
+FL006,LEISURE_HEAVY,Basic,1,113.4,84,15,190,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL006,LEISURE_HEAVY,Main,2,193.5,92,17,105,85,"Protecting seats for higher fare classes: Comfort, First"
+FL006,LEISURE_HEAVY,Comfort,3,347.4,61,10,41,149,Protecting seats for higher fare classes: First
+FL006,LEISURE_HEAVY,First,4,702.0,41,7,0,190,Highest fare class; no higher class to protect.
+FL006,PRICE_PRESSURE,Basic,1,107.1,69,17,171,19,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL006,PRICE_PRESSURE,Main,2,182.75,76,19,88,102,"Protecting seats for higher fare classes: Comfort, First"
+FL006,PRICE_PRESSURE,Comfort,3,328.1,50,12,34,156,Protecting seats for higher fare classes: First
+FL006,PRICE_PRESSURE,First,4,663.0,34,8,0,190,Highest fare class; no higher class to protect.
+FL007,BASE,Basic,1,120.0,70,14,175,25,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL007,BASE,Main,2,233.0,77,15,90,110,"Protecting seats for higher fare classes: Comfort, First"
+FL007,BASE,Comfort,3,365.0,56,11,33,167,Protecting seats for higher fare classes: First
+FL007,BASE,First,4,689.0,33,6,0,200,Highest fare class; no higher class to protect.
+FL007,HIGH_DEMAND,Basic,1,126.0,88,16,200,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL007,HIGH_DEMAND,Main,2,244.65,96,17,112,88,"Protecting seats for higher fare classes: Comfort, First"
+FL007,HIGH_DEMAND,Comfort,3,383.25,70,13,40,160,Protecting seats for higher fare classes: First
+FL007,HIGH_DEMAND,First,4,723.45,41,7,0,200,Highest fare class; no higher class to protect.
+FL007,LOW_DEMAND,Basic,1,114.0,52,13,133,67,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL007,LOW_DEMAND,Main,2,221.35,58,14,68,132,"Protecting seats for higher fare classes: Comfort, First"
+FL007,LOW_DEMAND,Comfort,3,346.75,42,10,25,175,Protecting seats for higher fare classes: First
+FL007,LOW_DEMAND,First,4,654.55,25,5,0,200,Highest fare class; no higher class to protect.
+FL007,BUSINESS_HEAVY,Basic,1,132.0,77,15,193,7,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL007,BUSINESS_HEAVY,Main,2,256.3,85,16,99,101,"Protecting seats for higher fare classes: Comfort, First"
+FL007,BUSINESS_HEAVY,Comfort,3,401.5,62,12,35,165,Protecting seats for higher fare classes: First
+FL007,BUSINESS_HEAVY,First,4,757.9,36,7,0,200,Highest fare class; no higher class to protect.
+FL007,LEISURE_HEAVY,Basic,1,108.0,80,15,200,0,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL007,LEISURE_HEAVY,Main,2,209.7,89,16,103,97,"Protecting seats for higher fare classes: Comfort, First"
+FL007,LEISURE_HEAVY,Comfort,3,328.5,64,12,38,162,Protecting seats for higher fare classes: First
+FL007,LEISURE_HEAVY,First,4,620.1,38,6,0,200,Highest fare class; no higher class to protect.
+FL007,PRICE_PRESSURE,Basic,1,102.0,66,17,167,33,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL007,PRICE_PRESSURE,Main,2,198.05,73,18,85,115,"Protecting seats for higher fare classes: Comfort, First"
+FL007,PRICE_PRESSURE,Comfort,3,310.25,53,13,30,170,Protecting seats for higher fare classes: First
+FL007,PRICE_PRESSURE,First,4,585.65,31,7,0,200,Highest fare class; no higher class to protect.
+FL008,BASE,Basic,1,132.0,84,16,111,39,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL008,BASE,Main,2,208.0,65,13,44,106,"Protecting seats for higher fare classes: Comfort, First"
+FL008,BASE,Comfort,3,427.0,29,5,13,137,Protecting seats for higher fare classes: First
+FL008,BASE,First,4,755.0,13,3,0,150,Highest fare class; no higher class to protect.
+FL008,HIGH_DEMAND,Basic,1,138.6,105,18,137,13,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL008,HIGH_DEMAND,Main,2,218.4,81,15,54,96,"Protecting seats for higher fare classes: Comfort, First"
+FL008,HIGH_DEMAND,Comfort,3,448.35,36,6,16,134,Protecting seats for higher fare classes: First
+FL008,HIGH_DEMAND,First,4,792.75,16,3,0,150,Highest fare class; no higher class to protect.
+FL008,LOW_DEMAND,Basic,1,125.4,63,14,84,66,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL008,LOW_DEMAND,Main,2,197.6,49,12,33,117,"Protecting seats for higher fare classes: Comfort, First"
+FL008,LOW_DEMAND,Comfort,3,405.65,22,4,10,140,Protecting seats for higher fare classes: First
+FL008,LOW_DEMAND,First,4,717.25,10,3,0,150,Highest fare class; no higher class to protect.
+FL008,BUSINESS_HEAVY,Basic,1,145.2,92,18,122,28,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL008,BUSINESS_HEAVY,Main,2,228.8,72,14,48,102,"Protecting seats for higher fare classes: Comfort, First"
+FL008,BUSINESS_HEAVY,Comfort,3,469.7,32,6,14,136,Protecting seats for higher fare classes: First
+FL008,BUSINESS_HEAVY,First,4,830.5,14,3,0,150,Highest fare class; no higher class to protect.
+FL008,LEISURE_HEAVY,Basic,1,118.8,97,17,127,23,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL008,LEISURE_HEAVY,Main,2,187.2,75,14,50,100,"Protecting seats for higher fare classes: Comfort, First"
+FL008,LEISURE_HEAVY,Comfort,3,384.3,33,5,15,135,Protecting seats for higher fare classes: First
+FL008,LEISURE_HEAVY,First,4,679.5,15,3,0,150,Highest fare class; no higher class to protect.
+FL008,PRICE_PRESSURE,Basic,1,112.2,80,19,107,43,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL008,PRICE_PRESSURE,Main,2,176.8,62,16,42,108,"Protecting seats for higher fare classes: Comfort, First"
+FL008,PRICE_PRESSURE,Comfort,3,362.95,28,6,11,139,Protecting seats for higher fare classes: First
+FL008,PRICE_PRESSURE,First,4,641.75,12,4,0,150,Highest fare class; no higher class to protect.
+FL009,BASE,Basic,1,123.0,88,17,81,79,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL009,BASE,Main,2,216.0,49,9,30,130,"Protecting seats for higher fare classes: Comfort, First"
+FL009,BASE,Comfort,3,408.0,19,3,10,150,Protecting seats for higher fare classes: First
+FL009,BASE,First,4,722.0,10,3,0,160,Highest fare class; no higher class to protect.
+FL009,HIGH_DEMAND,Basic,1,129.15,110,20,100,60,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL009,HIGH_DEMAND,Main,2,226.8,61,10,37,123,"Protecting seats for higher fare classes: Comfort, First"
+FL009,HIGH_DEMAND,Comfort,3,428.4,24,3,12,148,Protecting seats for higher fare classes: First
+FL009,HIGH_DEMAND,First,4,758.1,12,3,0,160,Highest fare class; no higher class to protect.
+FL009,LOW_DEMAND,Basic,1,116.85,66,15,62,98,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL009,LOW_DEMAND,Main,2,205.2,37,8,23,137,"Protecting seats for higher fare classes: Comfort, First"
+FL009,LOW_DEMAND,Comfort,3,387.6,14,3,8,152,Protecting seats for higher fare classes: First
+FL009,LOW_DEMAND,First,4,685.9,8,3,0,160,Highest fare class; no higher class to protect.
+FL009,BUSINESS_HEAVY,Basic,1,135.3,97,19,89,71,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL009,BUSINESS_HEAVY,Main,2,237.6,54,10,33,127,"Protecting seats for higher fare classes: Comfort, First"
+FL009,BUSINESS_HEAVY,Comfort,3,448.8,21,3,11,149,Protecting seats for higher fare classes: First
+FL009,BUSINESS_HEAVY,First,4,794.2,11,3,0,160,Highest fare class; no higher class to protect.
+FL009,LEISURE_HEAVY,Basic,1,110.7,101,18,93,67,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL009,LEISURE_HEAVY,Main,2,194.4,56,9,35,125,"Protecting seats for higher fare classes: Comfort, First"
+FL009,LEISURE_HEAVY,Comfort,3,367.2,22,3,12,148,Protecting seats for higher fare classes: First
+FL009,LEISURE_HEAVY,First,4,649.8,12,3,0,160,Highest fare class; no higher class to protect.
+FL009,PRICE_PRESSURE,Basic,1,104.55,84,20,79,81,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL009,PRICE_PRESSURE,Main,2,183.6,47,11,29,131,"Protecting seats for higher fare classes: Comfort, First"
+FL009,PRICE_PRESSURE,Comfort,3,346.8,18,4,9,151,Protecting seats for higher fare classes: First
+FL009,PRICE_PRESSURE,First,4,613.7,10,4,0,160,Highest fare class; no higher class to protect.
+FL010,BASE,Basic,1,109.0,115,23,93,97,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL010,BASE,Main,2,213.0,57,11,32,158,"Protecting seats for higher fare classes: Comfort, First"
+FL010,BASE,Comfort,3,388.0,20,4,11,179,Protecting seats for higher fare classes: First
+FL010,BASE,First,4,817.0,11,3,0,190,Highest fare class; no higher class to protect.
+FL010,HIGH_DEMAND,Basic,1,114.45,144,26,116,74,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL010,HIGH_DEMAND,Main,2,223.65,71,13,41,149,"Protecting seats for higher fare classes: Comfort, First"
+FL010,HIGH_DEMAND,Comfort,3,407.4,25,5,14,176,Protecting seats for higher fare classes: First
+FL010,HIGH_DEMAND,First,4,857.85,14,3,0,190,Highest fare class; no higher class to protect.
+FL010,LOW_DEMAND,Basic,1,103.55,86,21,71,119,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL010,LOW_DEMAND,Main,2,202.35,43,10,24,166,"Protecting seats for higher fare classes: Comfort, First"
+FL010,LOW_DEMAND,Comfort,3,368.6,15,4,8,182,Protecting seats for higher fare classes: First
+FL010,LOW_DEMAND,First,4,776.15,8,3,0,190,Highest fare class; no higher class to protect.
+FL010,BUSINESS_HEAVY,Basic,1,119.9,127,25,103,87,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL010,BUSINESS_HEAVY,Main,2,234.3,63,12,35,155,"Protecting seats for higher fare classes: Comfort, First"
+FL010,BUSINESS_HEAVY,Comfort,3,426.8,22,4,12,178,Protecting seats for higher fare classes: First
+FL010,BUSINESS_HEAVY,First,4,898.7,12,3,0,190,Highest fare class; no higher class to protect.
+FL010,LEISURE_HEAVY,Basic,1,98.1,132,24,108,82,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL010,LEISURE_HEAVY,Main,2,191.7,66,12,37,153,"Protecting seats for higher fare classes: Comfort, First"
+FL010,LEISURE_HEAVY,Comfort,3,349.2,23,4,13,177,Protecting seats for higher fare classes: First
+FL010,LEISURE_HEAVY,First,4,735.3,13,3,0,190,Highest fare class; no higher class to protect.
+FL010,PRICE_PRESSURE,Basic,1,92.65,109,28,89,101,"Protecting seats for higher fare classes: Main, Comfort, First"
+FL010,PRICE_PRESSURE,Main,2,181.05,54,13,31,159,"Protecting seats for higher fare classes: Comfort, First"
+FL010,PRICE_PRESSURE,Comfort,3,329.8,19,5,10,180,Protecting seats for higher fare classes: First
+FL010,PRICE_PRESSURE,First,4,694.45,10,4,0,190,Highest fare class; no higher class to protect.

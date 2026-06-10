@@ -1,0 +1,11 @@
+flight_id,flight_number,origin,destination,departure_date,aircraft_type,seat_capacity,route_type,day_of_week
+FL001,AA101,BOS,ORD,2026-07-01,A320,150,Business,Monday
+FL002,AA102,BOS,JFK,2026-07-02,B737,160,Business,Tuesday
+FL003,AA103,ORD,LAX,2026-07-03,A321,190,Leisure,Wednesday
+FL004,AA104,ATL,MIA,2026-07-04,A320,150,Leisure,Thursday
+FL005,AA105,DFW,SEA,2026-07-05,B737,160,Mixed,Friday
+FL006,AA106,JFK,SFO,2026-07-06,A321,190,Business,Saturday
+FL007,AA107,LAX,JFK,2026-07-07,B757,200,Business,Sunday
+FL008,AA108,DEN,ATL,2026-07-08,A320,150,Mixed,Monday
+FL009,AA109,SEA,DFW,2026-07-09,B737,160,Leisure,Tuesday
+FL010,AA110,MIA,BOS,2026-07-10,A321,190,Leisure,Wednesday
