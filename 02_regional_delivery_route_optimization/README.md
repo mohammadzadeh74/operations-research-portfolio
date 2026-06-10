@@ -474,29 +474,7 @@ This type of analysis can help logistics planners evaluate tradeoffs between fle
 
 ---
 
-## Resume Bullet Drafts
-
-* Developed a capacitated vehicle routing optimization model using OR-Tools to assign customer deliveries across a multi-vehicle fleet while minimizing operating cost under vehicle capacity and route-distance constraints.
-* Built a Streamlit decision-support dashboard allowing stakeholders to test demand growth, fleet availability, vehicle capacity, and route-distance scenarios, with automated infeasibility diagnosis and downloadable route plans.
-* Conducted scenario analysis across fleet and demand conditions, identifying that 20% demand growth required all available vehicles while a 15% capacity expansion reduced simulated operating cost from $1,962.18 to $1,845.91.
-
----
-
-## Project Status
-
-Completed core project components:
-
-* Synthetic dataset generation
-* CVRP optimization model
-* Route visualization
-* Scenario analysis
-* Scenario comparison plots
-* Streamlit dashboard
-* Data upload and format validation
-* Infeasibility diagnosis
-* Downloadable route outputs
-
-Next possible extensions:
+## Next Possible Extensions:
 
 * Add time-window constraints
 * Add stochastic customer demand
