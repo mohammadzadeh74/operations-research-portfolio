@@ -1,0 +1,13 @@
+aircraft_id,flight_number,assigned_crew,scheduled_departure,buffer_target_completion,completion_time,delay_min,buffer_violation_min,service_status,delay_penalty_per_min,weighted_delay_cost,weighted_buffer_violation_cost
+A004,DL1003,C1,09:03,08:53,10:58,115.0,125.0,Delayed,9.2,1058.0,287.5
+A005,DL1004,C1,08:13,08:03,09:43,90.0,100.0,Delayed,16.7,1503.0,417.5
+A010,DL1009,C1,10:42,10:32,11:49,67.0,77.0,Delayed,4.97,332.99,95.67
+A003,DL1002,C2,09:28,09:18,10:33,65.0,75.0,Delayed,11.87,771.55,222.56
+A007,DL1006,C2,11:10,11:00,11:58,48.0,58.0,Delayed,13.43,644.64,194.73
+A006,DL1005,C3,08:34,08:24,09:19,45.0,55.0,Delayed,8.63,388.35,118.66
+A002,DL1001,C3,10:37,10:27,10:54,17.0,27.0,Delayed,13.85,235.45,93.49
+A009,DL1008,C2,09:04,08:54,09:19,15.0,25.0,Delayed,10.31,154.65,64.44
+A008,DL1007,C3,11:32,11:22,11:43,11.0,21.0,Delayed,5.57,61.27,29.24
+A001,DL1000,C2,08:14,08:04,08:11,0.0,7.0,At Risk,13.79,0.0,24.13
+A012,DL1011,C1,08:34,08:24,08:07,0.0,0.0,On Time,13.16,0.0,0.0
+A011,DL1010,C3,08:32,08:22,08:07,0.0,0.0,On Time,12.68,0.0,0.0

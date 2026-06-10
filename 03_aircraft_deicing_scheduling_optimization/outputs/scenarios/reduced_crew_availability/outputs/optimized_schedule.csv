@@ -1,0 +1,13 @@
+aircraft_id,flight_number,assigned_crew,gate,aircraft_type,ready_time_min,ready_time,scheduled_departure_min,scheduled_departure,departure_buffer_min,buffer_target_completion_min,buffer_target_completion,service_time_min,start_time_min,start_time,completion_time_min,completion_time,delay_min,buffer_violation_min,service_status,delay_penalty_per_min,weighted_delay_cost,weighted_buffer_violation_cost,crew_sequence_order
+A001,DL1000,C1,G5,narrow_body,378,06:18,494,08:14,10,484,08:04,54,420.0,07:00,474.0,07:54,0.0,0.0,On Time,13.79,0.0,0.0,1
+A005,DL1004,C1,G4,wide_body,440,07:20,493,08:13,10,483,08:03,70,478.0,07:58,548.0,09:08,55.0,65.0,Delayed,16.7,918.5,271.38,2
+A003,DL1002,C1,G4,narrow_body,475,07:55,568,09:28,10,558,09:18,53,548.0,09:08,601.0,10:01,33.0,43.0,Delayed,11.87,391.71,127.6,3
+A002,DL1001,C1,G4,wide_body,555,09:15,637,10:37,10,627,10:27,70,601.0,10:01,671.0,11:11,34.0,44.0,Delayed,13.85,470.9,152.35,4
+A008,DL1007,C1,G8,regional,595,09:55,692,11:32,10,682,11:22,34,676.0,11:16,710.0,11:50,18.0,28.0,Delayed,5.57,100.26,38.99,5
+A010,DL1009,C1,G8,regional,563,09:23,642,10:42,10,632,10:32,35,710.0,11:50,745.0,12:25,103.0,113.0,Delayed,4.97,511.91,140.4,6
+A011,DL1010,C2,G2,narrow_body,420,07:00,512,08:32,10,502,08:22,51,420.0,07:00,471.0,07:51,0.0,0.0,On Time,12.68,0.0,0.0,1
+A012,DL1011,C2,G3,narrow_body,405,06:45,514,08:34,10,504,08:24,51,477.0,07:57,528.0,08:48,14.0,24.0,Delayed,13.16,184.24,78.96,2
+A006,DL1005,C2,G7,narrow_body,434,07:14,514,08:34,10,504,08:24,49,536.0,08:56,585.0,09:45,71.0,81.0,Delayed,8.63,612.73,174.76,3
+A009,DL1008,C2,G5,narrow_body,429,07:09,544,09:04,10,534,08:54,52,593.0,09:53,645.0,10:45,101.0,111.0,Delayed,10.31,1041.31,286.1,4
+A007,DL1006,C2,G5,narrow_body,608,10:08,670,11:10,10,660,11:00,56,645.0,10:45,701.0,11:41,31.0,41.0,Delayed,13.43,416.33,137.66,5
+A004,DL1003,C2,G4,narrow_body,496,08:16,543,09:03,10,533,08:53,57,705.0,11:45,762.0,12:42,219.0,229.0,Delayed,9.2,2014.8,526.7,6

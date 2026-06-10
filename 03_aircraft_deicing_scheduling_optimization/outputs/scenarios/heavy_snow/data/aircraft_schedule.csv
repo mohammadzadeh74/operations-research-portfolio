@@ -1,0 +1,13 @@
+aircraft_id,flight_number,scheduled_departure_min,ready_time_min,aircraft_type,service_time_min,gate,passenger_load,priority_score,delay_penalty_per_min,weather_severity
+A005,DL1004,493,440,wide_body,92,G4,290,4,16.7,heavy
+A001,DL1000,494,378,narrow_body,71,G5,143,5,13.79,heavy
+A011,DL1010,512,420,narrow_body,67,G2,156,4,12.68,heavy
+A006,DL1005,514,434,narrow_body,64,G7,121,2,8.63,heavy
+A012,DL1011,514,405,narrow_body,67,G3,122,5,13.16,heavy
+A004,DL1003,543,496,narrow_body,75,G4,140,2,9.2,heavy
+A009,DL1008,544,429,narrow_body,68,G5,127,3,10.31,heavy
+A003,DL1002,568,475,narrow_body,70,G4,179,3,11.87,heavy
+A002,DL1001,637,555,wide_body,91,G4,295,2,13.85,heavy
+A010,DL1009,642,563,regional,46,G8,49,1,4.97,heavy
+A007,DL1006,670,608,narrow_body,74,G5,181,4,13.43,heavy
+A008,DL1007,692,595,regional,44,G8,69,1,5.57,heavy

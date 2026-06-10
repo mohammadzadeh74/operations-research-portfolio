@@ -1,0 +1,3 @@
+crew_id,shift_start_min,shift_end_min,overtime_cost_per_min,home_pad
+C1,420,720,4.0,PAD1
+C2,420,720,4.0,PAD1

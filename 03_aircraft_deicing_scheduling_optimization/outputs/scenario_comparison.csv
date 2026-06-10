@@ -1,0 +1,6 @@
+scenario,solver_status,objective_value,num_aircraft,num_crews,weather_severity,departure_buffer_min,buffer_violation_cost_factor,on_time_flights,at_risk_flights,delayed_flights,total_delay_min,total_buffer_violation_min,total_weighted_delay_cost,total_weighted_buffer_cost,total_overtime_min,total_overtime_cost,average_crew_utilization_percent,scenario_output_folder
+Base Case,Optimal,2046.6,12,3,moderate,10,0.25,5,2,5,141.0,205.0,1479.72,566.88,0.0,0.0,93.68,outputs/scenarios\base_case\outputs
+Heavy Snow,Optimal,6697.83,12,3,heavy,10,0.25,2,1,9,473.0,570.0,5149.9,1547.92,0.0,0.0,95.28,outputs/scenarios\heavy_snow\outputs
+Reduced Crew Availability,Optimal,8865.59,12,2,moderate,10,0.25,2,0,10,679.0,779.0,6662.69,1934.9,67.0,268.0,94.82,outputs/scenarios\reduced_crew_availability\outputs
+High Flight Volume,Optimal,7276.68,16,3,moderate,10,0.25,5,0,11,570.0,680.0,5530.08,1674.6,18.0,72.0,91.21,outputs/scenarios\high_flight_volume\outputs
+Tight Departure Buffer,Optimal,2252.58,12,3,moderate,20,0.25,3,5,4,146.0,277.0,1485.67,766.9,0.0,0.0,92.63,outputs/scenarios\tight_departure_buffer\outputs

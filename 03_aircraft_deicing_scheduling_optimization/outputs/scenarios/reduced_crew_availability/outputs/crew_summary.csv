@@ -1,0 +1,3 @@
+crew_id,num_assigned_aircraft,shift_start_min,shift_start,shift_end_min,shift_end,first_start_min,first_start,last_completion_min,last_completion,total_service_time_min,active_span_min,utilization_percent,overtime_min,overtime_cost
+C1,6,420,07:00,720,12:00,420.0,07:00,745.0,12:25,316,325.0,97.23,25.0,100.0
+C2,6,420,07:00,720,12:00,420.0,07:00,762.0,12:42,316,342.0,92.4,42.0,168.0
