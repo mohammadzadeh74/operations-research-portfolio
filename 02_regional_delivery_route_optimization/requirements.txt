@@ -1,5 +1,5 @@
-numpy<2
-pandas
-ortools
-streamlit
-plotly
+streamlit==1.38.0
+pandas==2.2.2
+numpy==1.26.4
+ortools==9.10.4067
+plotly==5.24.1
