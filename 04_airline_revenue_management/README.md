@@ -105,7 +105,10 @@ Generated output files:
 
 ## Dashboard Screenshots
 
-Add the screenshots after capturing them from the Streamlit app.
+### App Overview
+
+![App Overview](screenshots/00_app_overview.png)
+
 
 ### Network Overview
 
