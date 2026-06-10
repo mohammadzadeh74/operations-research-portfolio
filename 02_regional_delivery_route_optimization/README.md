@@ -4,7 +4,6 @@
 
 Streamlit dashboard: **[Launch App](https://operations-research-portfolio-ff7gbdcmtcwbqknvstvttx.streamlit.app/)**
 
-> Replace the placeholder above with your Streamlit app link after deployment.
 
 ---
 
