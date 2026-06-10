@@ -8,6 +8,10 @@ Airlines sell seats through multiple fare classes, such as Basic, Main, Comfort,
 
 This project compares a simple baseline booking policy against a fare-class protection policy using synthetic airline booking data, optimization logic, protection-level modeling, and Monte Carlo simulation.
 
+## Live App
+
+[Open Streamlit App](https://operations-research-portfolio-upppmagssubzaexxcj9qgj.streamlit.app/)
+
 ## Business Problem
 
 Airline revenue management teams need to answer questions such as:
@@ -60,55 +64,13 @@ Generated output files:
 | `simulated_fare_class_results.csv` | Fare-class-level simulation results                                    |
 | `simulated_policy_summary.csv`     | Final dashboard-ready policy comparison summary                        |
 
-## Project Structure
 
-```text
-04_airline_revenue_management/
-│
-├── app/
-│   └── streamlit_app.py
-│
-├── data/
-│   ├── flights.csv
-│   ├── fare_classes.csv
-│   ├── demand_forecasts.csv
-│   └── booking_scenarios.csv
-│
-├── outputs/
-│   ├── optimized_seat_allocations.csv
-│   ├── scenario_results.csv
-│   ├── protection_levels.csv
-│   ├── protection_policy_results.csv
-│   ├── protection_policy_summary.csv
-│   ├── simulated_revenue_results.csv
-│   ├── simulated_fare_class_results.csv
-│   └── simulated_policy_summary.csv
-│
-├── screenshots/
-│   ├── 01_network_overview.png
-│   ├── 02_network_charts.png
-│   ├── 03_selected_flight_overview.png
-│   ├── 04_fare_class_protection.png
-│   ├── 05_simulation_results.png
-│   └── 06_data_downloads.png
-│
-├── src/
-│   ├── generate_data.py
-│   ├── optimization_model.py
-│   ├── protection_level_model.py
-│   ├── scenario_analysis.py
-│   └── simulation_revenue_model.py
-│
-├── requirements.txt
-└── README.md
-```
 
 ## Dashboard Screenshots
 
 ### App Overview
 
 ![App Overview](screenshots/00_app_overview.png)
-
 
 ### Network Overview
 
@@ -130,9 +92,7 @@ Generated output files:
 
 ![Simulation Results](screenshots/05_simulation_results.png)
 
-### Data and Downloads
 
-![Data and Downloads](screenshots/06_data_downloads.png)
 
 ## Modeling Approach
 
@@ -148,116 +108,116 @@ Together, these layers demonstrate both mathematical optimization and practical 
 
 ## Sets and Indices
 
-| Symbol      | Description                                |
-| ----------- | ------------------------------------------ |
-| ( f \in F ) | Set of flights                             |
-| ( c \in C ) | Set of fare classes                        |
-| ( s \in S ) | Set of demand/pricing scenarios            |
-| ( m \in M ) | Set of Monte Carlo simulation replications |
+| Symbol    | Description                                |
+| --------- | ------------------------------------------ |
+| $f \in F$ | Set of flights                             |
+| $c \in C$ | Set of fare classes                        |
+| $s \in S$ | Set of demand/pricing scenarios            |
+| $m \in M$ | Set of Monte Carlo simulation replications |
 
 Fare classes are ordered from lowest to highest fare:
 
-[
+$$
 Basic < Main < Comfort < First
-]
+$$
 
-For each fare class ( c ), define:
+For each fare class $c$, define:
 
-[
-H(c) = {j \in C: j \text{ has a higher fare rank than } c}
-]
+$$
+H(c) = {j \in C : j \text{ has a higher fare rank than } c}
+$$
 
-where (H(c)) is the set of fare classes that are higher than fare class (c).
+where $H(c)$ is the set of fare classes that are higher than fare class $c$.
 
 ## Input Parameters
 
 | Symbol            | Description                                                            |
 | ----------------- | ---------------------------------------------------------------------- |
-| (K_f)             | Seat capacity of flight (f)                                            |
-| (p_{fcs})         | Fare price for flight (f), fare class (c), scenario (s)                |
-| (\mu_{fcs})       | Forecasted demand for flight (f), fare class (c), scenario (s)         |
-| (\sigma_{fcs})    | Demand standard deviation for flight (f), fare class (c), scenario (s) |
-| (r^{cancel}_{fc}) | Cancellation rate for flight (f), fare class (c)                       |
-| (r^{noshow}_{fc}) | No-show rate for flight (f), fare class (c)                            |
-| (q_s)             | Scenario-specific demand multiplier                                    |
-| (g_s)             | Scenario-specific price multiplier                                     |
-| (u_s)             | Scenario-specific uncertainty multiplier                               |
+| $K_f$             | Seat capacity of flight $f$                                            |
+| $p_{fcs}$         | Fare price for flight $f$, fare class $c$, scenario $s$                |
+| $\mu_{fcs}$       | Forecasted demand for flight $f$, fare class $c$, scenario $s$         |
+| $\sigma_{fcs}$    | Demand standard deviation for flight $f$, fare class $c$, scenario $s$ |
+| $r^{cancel}_{fc}$ | Cancellation rate for flight $f$, fare class $c$                       |
+| $r^{noshow}_{fc}$ | No-show rate for flight $f$, fare class $c$                            |
+| $q_s$             | Scenario-specific demand multiplier                                    |
+| $g_s$             | Scenario-specific price multiplier                                     |
+| $u_s$             | Scenario-specific uncertainty multiplier                               |
 
 Scenario-adjusted fare price is calculated as:
 
-[
+$$
 p_{fcs} = p_{fc} \cdot g_s
-]
+$$
 
 Scenario-adjusted demand is calculated as:
 
-[
+$$
 \mu_{fcs} = \mu_{fc} \cdot q_s
-]
+$$
 
 Scenario-adjusted demand uncertainty is calculated as:
 
-[
+$$
 \sigma_{fcs} = \sigma_{fc} \cdot u_s
-]
+$$
 
-# 1. Deterministic Seat Allocation Model
+## 1. Deterministic Seat Allocation Model
 
 The first modeling layer is a deterministic capacity-allocation model. It assigns available aircraft seats across fare classes to maximize expected revenue.
 
 This model is useful as an optimization benchmark, but it does not fully represent real airline revenue management because it assumes demand is known and seats can be directly allocated to fare classes.
 
-## Decision Variable
+### Decision Variable
 
-[
+$$
 x_{fcs} = \text{number of seats allocated to fare class } c \text{ on flight } f \text{ under scenario } s
-]
+$$
 
 where:
 
-[
+$$
 x_{fcs} \in \mathbb{Z}_{+}
-]
+$$
 
-## Objective Function
+### Objective Function
 
 Maximize total expected revenue:
 
-[
+$$
 \max \sum_{c \in C} p_{fcs} x_{fcs}
-]
+$$
 
 This objective prioritizes allocating limited seat capacity to higher-revenue fare classes while respecting demand and capacity limits.
 
-## Constraints
+### Constraints
 
-### Aircraft Capacity Constraint
+#### Aircraft Capacity Constraint
 
 The total number of allocated seats cannot exceed aircraft capacity:
 
-[
+$$
 \sum_{c \in C} x_{fcs} \leq K_f
-]
+$$
 
-### Fare-Class Demand Constraint
+#### Fare-Class Demand Constraint
 
 The number of allocated seats for each fare class cannot exceed forecasted demand:
 
-[
+$$
 x_{fcs} \leq \mu_{fcs} \quad \forall c \in C
-]
+$$
 
-### Non-Negativity and Integrality
+#### Non-Negativity and Integrality
 
-[
+$$
 x_{fcs} \geq 0
-]
+$$
 
-[
+$$
 x_{fcs} \in \mathbb{Z}_{+}
-]
+$$
 
-## Deterministic Model Interpretation
+### Deterministic Model Interpretation
 
 This model answers:
 
@@ -265,80 +225,80 @@ This model answers:
 
 However, in real airline revenue management, airlines do not usually reserve a fixed number of physical seats for each fare class. Instead, they control seat availability through booking limits and protection levels. Therefore, this project extends the deterministic model with a protection policy.
 
-# 2. Fare-Class Protection and Booking-Limit Policy
+## 2. Fare-Class Protection and Booking-Limit Policy
 
 The second modeling layer calculates booking limits for lower-fare classes and protects seats for higher-fare passengers who may book later.
 
 This is closer to airline revenue-management logic because lower-fare demand often arrives earlier, while higher-fare demand may arrive closer to departure.
 
-## Protection-Level Logic
+### Protection-Level Logic
 
-For each fare class (c), the model estimates how many seats should be protected for all higher fare classes (H(c)).
+For each fare class $c$, the model estimates how many seats should be protected for all higher fare classes $H(c)$.
 
 The aggregate expected demand from higher fare classes is:
 
-[
-\mu^H_{fcs} = \sum_{j \in H(c)} \mu_{fjs}
-]
+$$
+\mu^{H}*{fcs} = \sum*{j \in H(c)} \mu_{fjs}
+$$
 
 Assuming independent demand across fare classes, the aggregate demand uncertainty for higher fare classes is:
 
-[
-\sigma^H_{fcs} = \sqrt{\sum_{j \in H(c)} \sigma_{fjs}^{2}}
-]
+$$
+\sigma^{H}*{fcs} = \sqrt{\sum*{j \in H(c)} \sigma_{fjs}^{2}}
+$$
 
 The weighted average fare of higher fare classes is:
 
-[
-\bar{p}^H_{fcs} =
-\frac{\sum_{j \in H(c)} p_{fjs}\mu_{fjs}}
+$$
+\bar{p}^{H}*{fcs} =
+\frac{\sum*{j \in H(c)} p_{fjs}\mu_{fjs}}
 {\sum_{j \in H(c)} \mu_{fjs}}
-]
+$$
 
 The critical ratio used for protection is:
 
-[
-\alpha_{fcs} = 1 - \frac{p_{fcs}}{\bar{p}^H_{fcs}}
-]
+$$
+\alpha_{fcs} = 1 - \frac{p_{fcs}}{\bar{p}^{H}_{fcs}}
+$$
 
 The protection level is calculated as:
 
-[
+$$
 y_{fcs} =
-\mu^H_{fcs} + \Phi^{-1}(\alpha_{fcs})\sigma^H_{fcs}
-]
+\mu^{H}*{fcs} + \Phi^{-1}(\alpha*{fcs})\sigma^{H}_{fcs}
+$$
 
 where:
 
 | Symbol         | Description                                               |
 | -------------- | --------------------------------------------------------- |
-| (y_{fcs})      | Number of seats protected for higher fare classes         |
-| (\Phi^{-1})    | Inverse standard normal cumulative distribution function  |
-| (\alpha_{fcs}) | Critical ratio comparing the current fare to higher fares |
+| $y_{fcs}$      | Number of seats protected for higher fare classes         |
+| $\Phi^{-1}$    | Inverse standard normal cumulative distribution function  |
+| $\alpha_{fcs}$ | Critical ratio comparing the current fare to higher fares |
 
 The protection level is bounded by aircraft capacity:
 
-[
+$$
 0 \leq y_{fcs} \leq K_f
-]
+$$
 
-## Booking Limit
+### Booking Limit
 
-The booking limit for fare class (c) is:
+The booking limit for fare class $c$ is:
 
-[
+$$
 b_{fcs} = K_f - y_{fcs}
-]
+$$
 
 where:
 
 | Symbol    | Description                                                                  |
 | --------- | ---------------------------------------------------------------------------- |
-| (b_{fcs}) | Maximum number of seats that may be sold before fare class (c) is restricted |
-| (K_f)     | Aircraft capacity                                                            |
-| (y_{fcs}) | Seats protected for higher fare classes                                      |
+| $b_{fcs}$ | Maximum number of seats that may be sold before fare class $c$ is restricted |
+| $K_f$     | Aircraft capacity                                                            |
+| $y_{fcs}$ | Seats protected for higher fare classes                                      |
 
-## Booking Limit Interpretation
+### Booking Limit Interpretation
 
 For example, if an aircraft has 150 seats and the model returns:
 
@@ -358,37 +318,37 @@ then the interpretation is:
 
 This prevents early low-fare demand from consuming too much capacity before higher-fare demand arrives.
 
-# 3. Simulation-Based Revenue Evaluation
+## 3. Simulation-Based Revenue Evaluation
 
 The third modeling layer evaluates the baseline and protection policies under uncertain demand.
 
 Instead of assuming demand is fixed, the model generates many possible demand realizations using Monte Carlo simulation.
 
-## Random Demand Generation
+### Random Demand Generation
 
-For each simulation replication (m), realized demand is generated as:
+For each simulation replication $m$, realized demand is generated as:
 
-[
+$$
 D_{fcsm} \sim \max(0, Normal(\mu_{fcs}, \sigma_{fcs}))
-]
+$$
 
 Demand is then adjusted for cancellation and no-show assumptions:
 
-[
+$$
 \tilde{D}*{fcsm} =
 D*{fcsm}(1-r^{cancel}*{fc})(1-r^{noshow}*{fc})
-]
+$$
 
 where:
 
 | Symbol             | Description                                                |
 | ------------------ | ---------------------------------------------------------- |
-| (D_{fcsm})         | Raw simulated demand                                       |
-| (\tilde{D}_{fcsm}) | Effective realized demand after cancellations and no-shows |
-| (r^{cancel}_{fc})  | Cancellation rate                                          |
-| (r^{noshow}_{fc})  | No-show rate                                               |
+| $D_{fcsm}$         | Raw simulated demand                                       |
+| $\tilde{D}_{fcsm}$ | Effective realized demand after cancellations and no-shows |
+| $r^{cancel}_{fc}$  | Cancellation rate                                          |
+| $r^{noshow}_{fc}$  | No-show rate                                               |
 
-## Baseline Booking Policy
+### Baseline Booking Policy
 
 The baseline policy represents a simple first-come-first-served approach.
 
@@ -396,144 +356,144 @@ Lower-fare demand is accepted first until the aircraft reaches capacity.
 
 Let:
 
-[
+$$
 a^{B}_{fcsm}
-]
+$$
 
 be the number of accepted bookings under the baseline policy.
 
 The baseline policy satisfies:
 
-[
+$$
 \sum_{c \in C} a^{B}_{fcsm} \leq K_f
-]
+$$
 
-[
+$$
 0 \leq a^{B}*{fcsm} \leq \tilde{D}*{fcsm}
-]
+$$
 
 Baseline revenue is:
 
-[
+$$
 R^{B}*{fsm} = \sum*{c \in C} p_{fcs} a^{B}_{fcsm}
-]
+$$
 
 The baseline policy can fill the aircraft quickly, but it may accept too much low-fare demand and leave no seats available for later high-fare passengers.
 
-## Protection Booking Policy
+### Protection Booking Policy
 
 The protection policy uses booking limits to restrict lower-fare bookings.
 
 Let:
 
-[
+$$
 a^{P}_{fcsm}
-]
+$$
 
 be the number of accepted bookings under the protection policy.
 
 The total accepted bookings must satisfy:
 
-[
+$$
 \sum_{c \in C} a^{P}_{fcsm} \leq K_f
-]
+$$
 
 Each accepted fare-class demand cannot exceed realized demand:
 
-[
+$$
 0 \leq a^{P}*{fcsm} \leq \tilde{D}*{fcsm}
-]
+$$
 
 For lower fare classes, cumulative accepted bookings are limited by booking limits:
 
-[
+$$
 \sum_{j: rank(j) \leq rank(c)} a^{P}*{fjsm} \leq b*{fcs}
-]
+$$
 
 This prevents lower-fare classes from exceeding the booking limits created by the protection-level model.
 
 Protection-policy revenue is:
 
-[
+$$
 R^{P}*{fsm} = \sum*{c \in C} p_{fcs} a^{P}_{fcsm}
-]
+$$
 
-# 4. Performance Metrics
+## 4. Performance Metrics
 
 The model compares the baseline and protection policies using several revenue-management metrics.
 
-## Revenue Lift
+### Revenue Lift
 
-[
+$$
 Lift_{fsm} = R^{P}*{fsm} - R^{B}*{fsm}
-]
+$$
 
-## Revenue Lift Percentage
+### Revenue Lift Percentage
 
-[
+$$
 LiftPct_{fsm} =
 \frac{R^{P}*{fsm} - R^{B}*{fsm}}{R^{B}_{fsm}} \times 100
-]
+$$
 
-## Load Factor
+### Load Factor
 
 Baseline load factor:
 
-[
+$$
 LF^{B}*{fsm} =
 \frac{\sum*{c \in C} a^{B}_{fcsm}}{K_f}
-]
+$$
 
 Protection load factor:
 
-[
+$$
 LF^{P}*{fsm} =
 \frac{\sum*{c \in C} a^{P}_{fcsm}}{K_f}
-]
+$$
 
-## Unused Seats
+### Unused Seats
 
 Baseline unused seats:
 
-[
+$$
 U^{B}*{fsm} =
 K_f - \sum*{c \in C} a^{B}_{fcsm}
-]
+$$
 
 Protection unused seats:
 
-[
+$$
 U^{P}*{fsm} =
 K_f - \sum*{c \in C} a^{P}_{fcsm}
-]
+$$
 
-## Denied Demand
+### Denied Demand
 
 Baseline denied demand:
 
-[
+$$
 Denied^{B}*{fsm} =
 \sum*{c \in C} \max(0, \tilde{D}*{fcsm} - a^{B}*{fcsm})
-]
+$$
 
 Protection denied demand:
 
-[
+$$
 Denied^{P}*{fsm} =
 \sum*{c \in C} \max(0, \tilde{D}*{fcsm} - a^{P}*{fcsm})
-]
+$$
 
-## Policy Win Rate
+### Policy Win Rate
 
 The protection policy is considered to win a simulation if:
 
-[
+$$
 R^{P}*{fsm} > R^{B}*{fsm}
-]
+$$
 
 The policy win rate is:
 
-[
+$$
 WinRate =
 \frac{
 \sum_{f \in F}\sum_{s \in S}\sum_{m \in M}
@@ -541,11 +501,11 @@ I(R^{P}*{fsm} > R^{B}*{fsm})
 }{
 |F||S||M|
 }
-]
+$$
 
-where (I(\cdot)) is an indicator function.
+where $I(\cdot)$ is an indicator function.
 
-# 5. Overall Modeling Workflow
+## 5. Overall Modeling Workflow
 
 The complete modeling workflow is:
 
@@ -560,7 +520,7 @@ The complete modeling workflow is:
 8. Display results in an interactive Streamlit dashboard
 ```
 
-# 6. Business Interpretation of the Model
+## 6. Business Interpretation of the Model
 
 The protection policy is designed to answer:
 
@@ -729,6 +689,53 @@ However, the project captures the core OR logic behind airline seat inventory co
 Limited capacity + multiple fare classes + uncertain demand + booking limits + revenue tradeoffs
 ```
 
+## Project Structure
+
+```text
+04_airline_revenue_management/
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── data/
+│   ├── flights.csv
+│   ├── fare_classes.csv
+│   ├── demand_forecasts.csv
+│   └── booking_scenarios.csv
+│
+├── outputs/
+│   ├── optimized_seat_allocations.csv
+│   ├── scenario_results.csv
+│   ├── protection_levels.csv
+│   ├── protection_policy_results.csv
+│   ├── protection_policy_summary.csv
+│   ├── simulated_revenue_results.csv
+│   ├── simulated_fare_class_results.csv
+│   └── simulated_policy_summary.csv
+│
+├── screenshots/
+│   ├── 00_app_overview.png
+│   ├── 01_network_overview.png
+│   ├── 02_network_charts.png
+│   ├── 03_selected_flight_overview.png
+│   ├── 04_fare_class_protection.png
+│   ├── 05_simulation_results.png
+│   └── 06_data_downloads.png
+│
+├── src/
+│   ├── generate_data.py
+│   ├── optimization_model.py
+│   ├── protection_level_model.py
+│   ├── scenario_analysis.py
+│   └── simulation_revenue_model.py
+│
+├── requirements.txt
+└── README.md
+```
+
+
+
+
 ## Possible Future Extensions
 
 Potential extensions include:
@@ -744,19 +751,3 @@ Potential extensions include:
 * Integrate real airline booking curves
 * Extend from single-leg revenue management to network revenue management
 
-## Skills Demonstrated
-
-* Operations Research
-* Revenue Management
-* Seat Inventory Optimization
-* Simulation Modeling
-* Scenario Analysis
-* Python Data Processing
-* Streamlit Dashboard Development
-* Plotly Visualization
-* Decision-Support App Design
-* Business Interpretation of Optimization Results
-
-## Portfolio Summary
-
-This project demonstrates how Operations Research and simulation can support airline revenue management decisions. The final dashboard allows a stakeholder to compare booking policies, inspect fare-class protection levels, evaluate uncertainty, and understand the tradeoff between expected revenue and aircraft utilization.
