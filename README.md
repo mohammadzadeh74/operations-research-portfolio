@@ -12,6 +12,9 @@ Each project includes:
 - Streamlit dashboard for stakeholder interaction
 
 
-| Project | OR Method | Tools | Status | Demo |
-|---|---|---|---|---|
-| Facility Location Optimization | MILP, Facility Location, Capacity Constraints | Python, PuLP, Streamlit | Completed | [Live App](https://operations-research-portfolio-ueoa43qcwfib95zqqgfnd7.streamlit.app/) |
+
+
+| Project                              | OR Method                                                          | Tools                               | Status    | Demo                                                                                    |
+| ------------------------------------ | ------------------------------------------------------------------ | ----------------------------------- | --------- | --------------------------------------------------------------------------------------- |
+| Facility Location Optimization       | MILP, Facility Location, Capacity Constraints                      | Python, PuLP, Streamlit             | Completed | [Live App](https://operations-research-portfolio-ueoa43qcwfib95zqqgfnd7.streamlit.app/) |
+| Regional Delivery Route Optimization | CVRP, Vehicle Routing, Capacity Constraints, Route-Distance Limits | Python, OR-Tools, Streamlit, Plotly | Completed | [Live App](https://operations-research-portfolio-ff7gbdcmtcwbqknvstvttx.streamlit.app/)                                         |
