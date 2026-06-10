@@ -2,7 +2,7 @@
 
 ## Live App
 
-Streamlit dashboard: **[Launch App](PASTE_STREAMLIT_APP_LINK_HERE)**
+Streamlit dashboard: **[Launch App](https://operations-research-portfolio-ff7gbdcmtcwbqknvstvttx.streamlit.app/)**
 
 > Replace the placeholder above with your Streamlit app link after deployment.
 
