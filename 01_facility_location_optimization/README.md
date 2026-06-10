@@ -212,10 +212,3 @@ The optimization model produces:
 - Scenario comparison results
 - Feasibility or infeasibility messages
 
-## Project Value
-
-This project demonstrates the use of Operations Research and optimization modeling for strategic network design. It shows how mathematical programming can support facility planning decisions and how an interactive dashboard can make optimization results easier for stakeholders to understand.
-
-## Resume-Ready Summary
-
-Developed a mixed-integer facility location optimization model in Python to select cost-minimizing facility locations under demand, capacity, budget, and service constraints. Built an interactive Streamlit dashboard enabling users to upload data, adjust scenario parameters, visualize selected facilities, and evaluate feasibility under changing demand and budget conditions.
