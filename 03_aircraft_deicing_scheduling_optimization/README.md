@@ -46,7 +46,6 @@ This project is designed as part of an Operations Research portfolio to demonstr
 
 ![Scenario Comparison](assets/base_vs_current_comparison.png)
 
-> Add screenshots to the `assets/` folder after final app testing or Streamlit deployment.
 
 ---
 
@@ -666,13 +665,6 @@ The scenario analysis shows that winter airport de-icing operations become highl
 
 The optimization model helps planners compare the base operating plan against current disruptions and identify whether the main issue is flight volume, severe weather, limited crews, or tight departure-buffer requirements.
 
----
-
-## Resume Bullet Drafts
-
-* Developed a MILP-based aircraft de-icing and snow-removal scheduling model using PuLP to assign aircraft to limited crews under ready-time, departure-buffer, sequencing, travel-time, and overtime constraints.
-* Built an interactive Streamlit decision-support dashboard allowing stakeholders to test weather severity, aircraft volume, crew availability, and departure-buffer scenarios with custom data upload and downloadable optimized schedules.
-* Conducted scenario analysis across winter disruption conditions, identifying reduced crew availability and heavy snow as the largest drivers of simulated delay, buffer violation, and overtime.
 
 ---
 
@@ -708,4 +700,3 @@ Next possible extensions:
 * Add cancellation or deferral decisions
 * Add explicit travel/setup bars to the Gantt chart
 * Add scheduling-window selection by departure time range
-* Deploy the Streamlit app online
