@@ -12,8 +12,11 @@ Each project includes:
 * Scenario or sensitivity analysis
 * Streamlit dashboard for stakeholder interaction
 
-| Project                                   | OR Method                                                           | Tools                               | Status    | Demo                                                                                    |
-| ----------------------------------------- | ------------------------------------------------------------------- | ----------------------------------- | --------- | --------------------------------------------------------------------------------------- |
-| Facility Location Optimization            | MILP, Facility Location, Capacity Constraints                       | Python, PuLP, Streamlit             | Completed | [Live App](https://operations-research-portfolio-ueoa43qcwfib95zqqgfnd7.streamlit.app/) |
-| Regional Delivery Route Optimization      | CVRP, Vehicle Routing, Capacity Constraints, Route-Distance Limits  | Python, OR-Tools, Streamlit, Plotly | Completed | [Live App](https://operations-research-portfolio-ff7gbdcmtcwbqknvstvttx.streamlit.app/) |
-| Aircraft De-Icing Scheduling Optimization | MILP, Crew Scheduling, Sequencing, Time Windows, Delay Minimization | Python, PuLP, Streamlit, Plotly     | Completed | [Live App](https://operations-research-portfolio-jmzjkrhpu2qdnlohkeq7bp.streamlit.app/)                                               |
+## Portfolio Projects
+
+| Project                                   | OR Method                                                                                      | Tools                                  | Status    | Demo                                                                                    |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------- | --------- | --------------------------------------------------------------------------------------- |
+| Facility Location Optimization            | MILP, Facility Location, Capacity Constraints                                                  | Python, PuLP, Streamlit                | Completed | [Live App](https://operations-research-portfolio-ueoa43qcwfib95zqqgfnd7.streamlit.app/) |
+| Regional Delivery Route Optimization      | CVRP, Vehicle Routing, Capacity Constraints, Route-Distance Limits                             | Python, OR-Tools, Streamlit, Plotly    | Completed | [Live App](https://operations-research-portfolio-ff7gbdcmtcwbqknvstvttx.streamlit.app/) |
+| Aircraft De-Icing Scheduling Optimization | MILP, Crew Scheduling, Sequencing, Time Windows, Delay Minimization                            | Python, PuLP, Streamlit, Plotly        | Completed | [Live App](https://operations-research-portfolio-jmzjkrhpu2qdnlohkeq7bp.streamlit.app/) |
+| Airline Revenue Management Optimization   | Revenue Management, Seat Inventory Optimization, Fare-Class Protection, Monte Carlo Simulation | Python, PuLP, SciPy, Streamlit, Plotly | Completed | [Live App](https://operations-research-portfolio-upppmagssubzaexxcj9qgj.streamlit.app/)                                         |
